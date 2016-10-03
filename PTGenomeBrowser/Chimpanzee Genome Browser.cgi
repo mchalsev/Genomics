@@ -1,14 +1,10 @@
 #!/usr/bin/perl
 #Author:Maria Chalsev
 #Date:Apr 14th, 2016
-#Course:BIF724
-# I declare that the attached assignment is wholly my own work in accordance with
-# Seneca Academic Policy. No part of this assignment has been copied manually or
-# electronically from any other source (including web sites) or distributed to other students.
 # Name:Maria Chalsev
 # ID:035231141
 
-
+#This program uses BioEnsEMBL API to create a web-based genome browser for Pan Troglodytis - Chimpanzee genome. 
 use strict;
 use warnings;
 use lib '/home/john.samuel/src/ensembl/modules';
