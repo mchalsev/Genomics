@@ -23,7 +23,7 @@ $registry->load_registry_from_db(
 );
 
 if (param()){
-    
+    #process user input
     my $user_start=param("start");
     my $user_end=param("end");
     my $chromosome = param("chroms");
@@ -36,7 +36,7 @@ if (param()){
     my $slice_adaptor = $registry -> get_adaptor ( $species, 'Core', 'Slice' );
 
     #-----------------------------------------------------------------------------------    
-    #Validation:
+    #user input validation:
     #-----------
     #1. checking for missing values
     #if both text values are missing use default values, if only one is missing print error,  otherwise proceed. 
@@ -79,7 +79,7 @@ if (param()){
         }
     }
 #    ----------------------------------------------------------------------------------------------
-    #printing errors to screen, if there are any:
+    #printing user input errors to screen, if there are any:
     if ($missVal) {
         print "<p><font color='#ff0000'>", $missVal, "</font><br></p>";
         print top_html("Chimp Genome Browser");
@@ -128,9 +128,10 @@ if (param()){
             <td align="center">number of transcripts for that gene</td>
         </tr>
 CHART_HEAD
-            #graphics
+
+ #graphical display:
         my $size = $end-$start;
-        #create a panel to contain everything 
+        #create a panel interface
         my $panel = Bio::Graphics::Panel->new(-length => $size, -width  => 800, -pad_left=>100, -pad_right=>100,
             -start=>$start,-end=> $end);
         #create an object to represent the scale bar
