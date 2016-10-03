@@ -4,7 +4,7 @@
 # Name:Maria Chalsev
 # ID:035231141
 
-#This program uses BioEnsEMBL API to create a web-based genome browser for Pan Troglodytis - Chimpanzee genome. 
+#This program uses BioEnsEMBL API to create a web-based genome browser for the Chimpanzee genome (Pan Troglodytis). 
 use strict;
 use warnings;
 use lib '/home/john.samuel/src/ensembl/modules';
